@@ -6,7 +6,7 @@ import AppHeader from './AppHeader.vue';
     <div class="min-h-screen bg-surface-50 flex flex-col">
         <AppHeader />
         
-        <main class="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <main class="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <router-view v-slot="{ Component }">
                 <transition name="fade" mode="out-in">
                     <component :is="Component" />

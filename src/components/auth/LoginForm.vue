@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { reactive } from 'vue';
+import { useRouter } from 'vue-router';
 import AppButton from '../UI/AppButton.vue';
 import AppInput from '../UI/AppInput.vue';
 import AppPassword from '../UI/AppPassword.vue';
 import { useAuthStore } from '../../stores/auth';
 
 const authStore = useAuthStore();
-
+const router = useRouter();
 const formData = reactive({
     email: '',
     password: ''
@@ -41,6 +42,9 @@ const validate = () => {
 const onSubmit = async () => {
     if (!validate()) return;
     await authStore.login(formData.email, formData.password);
+    if (!authStore.error) {
+        router.push('/');
+    }
 };
 </script>
 

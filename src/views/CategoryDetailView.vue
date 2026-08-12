@@ -2,6 +2,7 @@
 import { computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { Button } from 'primevue';
+import AppButton from '../components/UI/AppButton.vue';
 import { useProductsStore } from '../stores/products';
 import ProductCard from '../components/products/ProductCard.vue';
 
@@ -16,16 +17,16 @@ const products = computed(() => productsStore.getProductsByCategory(categoryId))
 
 <template>
     <div>
-        <Button 
+        <AppButton 
             icon="pi pi-arrow-left" 
             label="Back to Categories" 
-            text 
-            severity="secondary" 
-            class="mb-4 -ml-3"
+            text
+            severity="secondary"
+            class="mb-2 -ml-3"
             @click="router.push('/')"
         />
 
-        <div v-if="category" class="mb-8 flex items-center gap-4">
+        <div v-if="category" class="mb-6 flex items-center gap-4">
             <h1 class="text-3xl font-bold text-surface-900">{{ category.name }}</h1>
             <span class="bg-primary-100 text-primary-800 text-sm font-medium px-3 py-1 rounded-full">
                 {{ products.length }} items

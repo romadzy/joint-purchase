@@ -55,8 +55,8 @@ const menuItems = ref([
     {
         label: 'Logout',
         icon: 'pi pi-sign-out',
-        command: () => {
-            authStore.logout();
+        command: async () => {
+            await authStore.logout();
             router.push('/auth');
         }
     }
