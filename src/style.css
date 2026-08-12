@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@import 'primeicons/primeicons.css';
+
+@theme {
+  --color-main: var(--main-bg);
+  --color-text-base: var(--text-base);
+  --color-text-heading: var(--text-heading);
+  --color-border-light: var(--border-light);
+  --color-code-bg: var(--code-bg);
+  
+  --color-accent: #aa3bff;
+  --color-accent-bg: rgba(170, 59, 255, 0.1);
+  --color-accent-border: rgba(170, 59, 255, 0.5);
+
+  --font-sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, Consolas, monospace;
+
+  --shadow-custom: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+@layer base {
+  :root {
+    --main-bg: #f4f4f5; 
+    --text-base: #52525b;
+    --text-heading: #09090b;
+    --border-light: #e4e4e7;
+    --code-bg: #e4e4e7;
+  }
+
+  :root.dark {
+    --main-bg: #09090b; 
+    --text-base: #a1a1aa;
+    --text-heading: #fafafa;
+    --border-light: #27272a; 
+    --code-bg: #18181b;
+  }
+
+  body {
+    @apply bg-main text-text-base font-sans;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-text-heading font-medium;
+  }
+}
