@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { Button } from 'primevue';
 import AppButton from '../components/UI/AppButton.vue';
 import { useProductsStore } from '../stores/products';
 import ProductCard from '../components/products/ProductCard.vue';
