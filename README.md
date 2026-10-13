@@ -74,4 +74,6 @@ Application pages are protected by authentication. Unauthenticated users are red
 - `src/views` — main application pages;
 - `src/router` — routes and navigation guards;
 - `src/types` — shared TypeScript types;
-- `src/utils/supabase.ts` — Supabase client.
+- `src/utils/supabase.ts` — Supabase client
+
+test
