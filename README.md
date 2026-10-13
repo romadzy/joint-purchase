@@ -76,4 +76,4 @@ Application pages are protected by authentication. Unauthenticated users are red
 - `src/types` — shared TypeScript types;
 - `src/utils/supabase.ts` — Supabase client
 
-test
+test test 2
